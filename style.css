@@ -1,7 +1,16 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
 body{
-    margin-left: 130px;
-    margin-right: 130px;
     background-color: azure;
+}
+
+.content{
+    background-color: white;
+    margin: auto;
+    max-width: 80%;
 }
 
 #header{
@@ -14,7 +23,8 @@ body{
 .container{
     display: flex;
     border-style: dashed;
-    justify-content: space-between;
+    justify-content: space-between; 
+    flex-wrap: wrap;
 }
 
 .controls{
@@ -22,11 +32,15 @@ body{
 }
 
 .grid{
-    border-style: solid;
     display: grid;
-    grid-template-columns: repeat(16, 10px)
+    grid-template-columns: repeat(16, 30px);
+    grid-template-rows: repeat(16, 30px); /* Adjust the number and height of rows as needed */
 }
 
 .grid-item{
     border-style: solid;
+}
+
+.grid-item :hover{
+    background-color: black;
 }
