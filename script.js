@@ -6,3 +6,9 @@ for(let i=0; i<256; i++){
     griditem.className = 'grid-item' 
     gridcontainer.appendChild(griditem)
 }
+
+let blockClick = document.body.addEventListener('click', function(e){
+    if(e.target.className == ".grid-item"){
+        console.log(e)
+    }
+})

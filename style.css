@@ -41,6 +41,6 @@ body{
     border-style: solid;
 }
 
-.grid-item :hover{
+.grid-item:hover{
     background-color: black;
 }
