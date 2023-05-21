@@ -1,5 +1,6 @@
 window.onload = function() {
-    createGrid()
+    createGrid(16)
+    setGrid(16)
   };
 
 
@@ -7,12 +8,13 @@ function createGrid(size){
     const container = document.querySelector('.container')
     const startGrid = document.createElement('div')
     startGrid.classList.add('grid')
-    startGrid.style.cssText = 'display: grid; grid-template-columns: repeat(16, 30px); grid-template-rows: repeat(16, 30px);'
+    // need size below to take the parameter from the variable 'size' and not 16
+    startGrid.style.cssText = `display: grid; grid-template-columns: repeat(${size}, 30px); grid-template-rows: repeat(${size}, 30px);`
     container.appendChild(startGrid)
-    setGrid(16)
 }
 
 function setGrid(size){
+    createGrid(size)
     const gridcontainer = document.querySelector('.grid')
     document.getElementsByClassName('grid')[0].textContent = '';
     for(let i=0; i<(size*size); i++){
