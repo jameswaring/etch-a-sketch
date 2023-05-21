@@ -13,3 +13,7 @@ let blockClick = document.body.addEventListener('mouseover', function(e){
         e.target.style.backgroundColor = 'black';
     }
 })
+
+range.addEventListener("input", function(e){
+    console.log(e)
+})

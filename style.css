@@ -23,7 +23,7 @@ body{
 .container{
     display: flex;
     border-style: dashed;
-    justify-content: space-between; 
+    justify-content: space-evenly; 
     flex-wrap: wrap;
 }
 
@@ -48,4 +48,9 @@ body{
 .blackfill{
     border-style: solid;
     background-color: black;
+}
+
+.control-title{
+    font-family: 'Pangolin', cursive;
+    font-size: 24pt;
 }
