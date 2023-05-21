@@ -1,3 +1,4 @@
+let color = "black";
 window.onload = function() {
     setGrid(16)
   };
@@ -24,20 +25,26 @@ function setGrid(size){
     }
 }
 
-let blockClick = document.body.addEventListener('mouseover', function(e){
+document.body.addEventListener('mouseover', (e) => {
     if(e.target.className == "grid-item"){
-        e.target.style.backgroundColor = 'black';
+        e.target.style.backgroundColor = color;
     }
-})
-
-let sliderChange = document.body.addEventListener("change", function(e){
-    let chosenSize = document.getElementById("slider").value
-    document.querySelector('.reader').innerHTML = chosenSize
-    setGrid(chosenSize)
 })
 
 document.body.addEventListener('click', (e) => {
     if(e.target.id == "reset"){
         setGrid(document.getElementById("slider").value)
+    }
+})
+
+document.body.addEventListener('change', (e) => {
+    if(e.target.id == "slider"){
+        let chosenSize = document.getElementById("slider").value
+        document.querySelector('.reader').innerHTML = chosenSize
+        setGrid(chosenSize)
+    }
+    if(e.target.id == "colorpicker"){
+        let localcolor = document.getElementById("colorpicker").value
+        color = localcolor
     }
 })
