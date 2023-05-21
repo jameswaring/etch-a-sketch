@@ -54,3 +54,8 @@ body{
     font-family: 'Pangolin', cursive;
     font-size: 24pt;
 }
+
+.grid-holder{
+    min-height: 300px;
+    min-width: 300px;
+}

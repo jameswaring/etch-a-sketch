@@ -1,11 +1,12 @@
 window.onload = function() {
-    createGrid(16)
     setGrid(16)
   };
 
 
 function createGrid(size){
-    const container = document.querySelector('.container')
+    console.log("creating")
+    const container = document.querySelector('.grid-holder')
+    container.innerHTML = ""
     const startGrid = document.createElement('div')
     startGrid.classList.add('grid')
     // need size below to take the parameter from the variable 'size' and not 16
@@ -16,7 +17,6 @@ function createGrid(size){
 function setGrid(size){
     createGrid(size)
     const gridcontainer = document.querySelector('.grid')
-    document.getElementsByClassName('grid')[0].textContent = '';
     for(let i=0; i<(size*size); i++){
         const griditem = document.createElement('div')
         griditem.className = 'grid-item' 
@@ -30,8 +30,14 @@ let blockClick = document.body.addEventListener('mouseover', function(e){
     }
 })
 
-let sliderChange = document.body.addEventListener("input", function(e){
+let sliderChange = document.body.addEventListener("change", function(e){
     let chosenSize = document.getElementById("slider").value
     document.querySelector('.reader').innerHTML = chosenSize
     setGrid(chosenSize)
+})
+
+document.body.addEventListener('click', (e) => {
+    if(e.target.id == "reset"){
+        setGrid(document.getElementById("slider").value)
+    }
 })
