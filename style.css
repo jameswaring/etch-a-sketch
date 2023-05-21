@@ -22,13 +22,15 @@ body{
 
 .container{
     display: flex;
-    border-style: dashed;
     justify-content: space-evenly; 
     flex-wrap: wrap;
+    border-style: solid;
 }
 
 .controls{
-    border-style: dashed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /*.grid{
@@ -81,4 +83,8 @@ button{
     -webkit-user-select: none;
     touch-action: manipulation;
     width: 100%;
+}
+
+.control-hold{
+    margin-bottom: 30px;
 }
