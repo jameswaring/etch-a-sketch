@@ -31,11 +31,11 @@ body{
     border-style: dashed;
 }
 
-.grid{
+/*.grid{
     display: grid;
     grid-template-columns: repeat(16, 30px);
-    grid-template-rows: repeat(16, 30px); /* Adjust the number and height of rows as needed */
-}
+    grid-template-rows: repeat(16, 30px);
+}*/
 
 .grid-item{
     border-style: solid;

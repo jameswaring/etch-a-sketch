@@ -1,7 +1,16 @@
 window.onload = function() {
-    setGrid(16);
+    createGrid()
   };
 
+
+function createGrid(size){
+    const container = document.querySelector('.container')
+    const startGrid = document.createElement('div')
+    startGrid.classList.add('grid')
+    startGrid.style.cssText = 'display: grid; grid-template-columns: repeat(16, 30px); grid-template-rows: repeat(16, 30px);'
+    container.appendChild(startGrid)
+    setGrid(16)
+}
 
 function setGrid(size){
     const gridcontainer = document.querySelector('.grid')
@@ -12,7 +21,6 @@ function setGrid(size){
         gridcontainer.appendChild(griditem)
     }
 }
-
 
 let blockClick = document.body.addEventListener('mouseover', function(e){
     if(e.target.className == "grid-item"){
