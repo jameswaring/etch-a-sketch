@@ -44,3 +44,8 @@ body{
 .grid-item:hover{
     background-color: black;
 }
+
+.blackfill{
+    border-style: solid;
+    background-color: black;
+}

@@ -8,7 +8,8 @@ for(let i=0; i<256; i++){
 }
 
 let blockClick = document.body.addEventListener('click', function(e){
-    if(e.target.className == ".grid-item"){
+    if(e.target.className == "grid-item"){
         console.log(e)
+        e.target.style.backgroundColor = 'black';
     }
 })
