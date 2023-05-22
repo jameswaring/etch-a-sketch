@@ -7,26 +7,26 @@
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Rubik+80s+Fade&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <script src="jscolor.js" defer></script>
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-    <div id="header">
-        Etch-a-Sketch
-    </div>
     <div class="content">
+        <div id="header">
+            Etch-a-Sketch
+        </div>
         <div class="container">
             <div class="controls">
                 <div class = "control-hold">
                     <div class="control-title">Color</div>
-                    <input data-jscolor="{}" id="colorpicker" value="Choose">
+                    <input data-jscolor="{}" id="colorpicker" value="#000000">
                 </div>
                     <div class = "control-hold">
                     <div class="control-title">Board Size</div>
                     <input type="range" id="slider" min="8" max="32" value="16">
-                    <div class="reader">16</div>
+                    <div class="reader">16 x 16</div>
                 </div>
                 <div class = "control-hold">
                     <button id="reset">Reset</button>

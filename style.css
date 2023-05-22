@@ -4,6 +4,8 @@ html{
 }
 
 body{
+    display: flex;
+    flex-direction: column;
     background-color: azure;
 }
 
@@ -11,17 +13,23 @@ body{
     background-color: white;
     margin: auto;
     max-width: 80%;
+    border-style: solid;
+    border-width: 20px;
+    border-color: red;
+    border-radius: 40px;
 }
 
 #header{
     text-align: center;
-    padding: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 30pt;
+    padding: 8px;
+    font-family: 'Rubik 80s Fade', cursive;
+    font-size: 40pt;
+    background-color: red;
 }
 
 .container{
     display: flex;
+    flex-basis: auto;
     justify-content: space-evenly; 
     flex-wrap: wrap;
     border-style: solid;
@@ -55,6 +63,7 @@ body{
 .control-title{
     font-family: 'Pangolin', cursive;
     font-size: 24pt;
+    text-align: center;
 }
 
 .grid-holder{
@@ -87,4 +96,15 @@ button{
 
 .control-hold{
     margin-bottom: 30px;
+    text-align: center;
+}
+
+.reader{
+    text-align: center;
+    font-family: 'Pangolin', cursive;
+    font-size: 14px;
+}
+
+#slider{
+    text-align: center;
 }

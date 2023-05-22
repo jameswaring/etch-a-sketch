@@ -10,7 +10,6 @@ function createGrid(size){
     container.innerHTML = ""
     const startGrid = document.createElement('div')
     startGrid.classList.add('grid')
-    // need size below to take the parameter from the variable 'size' and not 16
     startGrid.style.cssText = `display: grid; grid-template-columns: repeat(${size}, 30px); grid-template-rows: repeat(${size}, 30px);`
     container.appendChild(startGrid)
 }
@@ -40,7 +39,7 @@ document.body.addEventListener('click', (e) => {
 document.body.addEventListener('change', (e) => {
     if(e.target.id == "slider"){
         let chosenSize = document.getElementById("slider").value
-        document.querySelector('.reader').innerHTML = chosenSize
+        document.querySelector('.reader').innerHTML = chosenSize + " x " + chosenSize
         setGrid(chosenSize)
     }
     if(e.target.id == "colorpicker"){
